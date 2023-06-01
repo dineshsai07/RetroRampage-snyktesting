@@ -21,7 +21,8 @@ jobs:
         run: cd Source
 
       - name: Resolve Package Dependencies
-        run: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
+        run: cd Source/Rampage.xcodeproj 
+             xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
         
       - name: show the list of files 
         run: ls
