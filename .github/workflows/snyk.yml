@@ -16,6 +16,9 @@ jobs:
           
       - name: Clone repository
         uses: actions/checkout@v2
+        
+      - name: change directory
+        run: cd Source
 
       - name: Resolve Package Dependencies
         run: xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SourcePackages
